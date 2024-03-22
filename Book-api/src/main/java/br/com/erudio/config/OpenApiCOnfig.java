@@ -9,21 +9,12 @@ import io.swagger.v3.oas.models.info.License;
 
 @Configuration
 public class OpenApiConfig {
-	
-	@Bean//É utilizado para buscar as informações das configurações dos beans
-	 OpenAPI customOpenAPI() {
-		return new OpenAPI()
-				.info(new Info()
-						.title("RESTfull API with Java 18 and Spring Boot 3")
-						.version("v1")
-						.description("Some description about your API")
-						.termsOfService("https://pub.erudio.com.br/meus-cursos")
-						.license(
-								new License()
-								.name("Apache 2.0")
-								.url("https://pub.erudio.com.br/meus-cursos")
-								)
-						);
+
+	@Bean // É utilizado para buscar as informações das configurações dos beans
+	OpenAPI customOpenAPI() {
+		return new OpenAPI().info(new Info().title("RESTfull API with Java 18 and Spring Boot 3").version("v1")
+				.description("Some description about your API").termsOfService("https://pub.erudio.com.br/meus-cursos")
+				.license(new License().name("Apache 2.0").url("https://pub.erudio.com.br/meus-cursos")));
 	}
 
 }
